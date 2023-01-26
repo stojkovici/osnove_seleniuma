@@ -15,7 +15,7 @@ public class Domaci_cetvrti_zadatak {
             driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Ivan");
             driver.findElement(By.xpath("//input[@name='department']")).sendKeys("QA");
             driver.findElement(By.xpath("//input[@name='phone']")).sendKeys("0601111111221");
-            driver.findElement(By.xpath("//a[@class='add']/i")).click();//???
+            driver.findElement(By.xpath("//tr[last()]/td[4]/a[@class='add']/i")).click();
         }
         Thread.sleep(500);
         driver.quit();

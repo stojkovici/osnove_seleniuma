@@ -10,12 +10,12 @@ public class Domaci_prvi_zadatak {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//form[@class='oxd-form']/div/div[1]/div[2]/input")).sendKeys("Admin");
         driver.findElement(By.xpath("//form[@class='oxd-form']/div[2]/div/div[2]/input")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(5000);
-        driver.findElement(By.xpath("//*[@class='oxd-icon bi-list oxd-topbar-header-hamburger']")).click();
-        driver.findElement(By.className("oxd-input oxd-input--active toggled")).sendKeys("Me");
+        driver.findElement(By.xpath("//input[@placeholder='Search']")).sendKeys("Me");
         driver.findElement(By.xpath("//*[@href='/web/index.php/time/viewTimeModule']")).click();
         Thread.sleep(1000);
         driver.findElement(By.className("oxd-userdropdown-img")).click();
